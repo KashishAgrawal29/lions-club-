@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Lions Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #02457a;
+            --secondary-yellow: #fdda5d;
+            --light-blue: #e0f0f9;
+            --white: #ffffff;
+        }
+
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, var(--secondary-yellow) 0%, var(--white) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px; /* Reserve space for the bottom nav */
+}
+
+        /* Header Section */
+        header {
+            display: flex;
+            align-items: center;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 20px;
+        }
+
+        header .back-btn {
+            color: var(--white);
+            text-decoration: none; /* Corrected 'none' spelling */
+            font-size: 24px;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        /* Container */
+        .container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Card Section */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--light-blue);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card i {
+            font-size: 36px;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            color: var(--primary-blue);
+            font-size: 18px;
+        }
+
+        .card p {
+            color: #333333;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .card-btn {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 10px 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .card-btn:hover {
+            background-color: var(--secondary-yellow);
+            color: var(--primary-blue);
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%; /* Ensures it spans the full width */
+            background-color: var(--primary-blue);
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-item {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+            padding: 15px 0; /* Adds padding within each item */
+            flex: 1; /* Ensures equal space for each item */
+            text-align: center; /* Centers icons horizontally */
+        }
+
+        .nav-item.active {
+            color: var(--secondary-yellow);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <a href="javascript:history.back()" class="back-btn">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <h1>Events</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="card-container">
+                <div class="card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Upcoming Events</h3>
+                    <p>Stay updated with our upcoming events and join us in making a difference!</p>
+                    <a href="Events.html" class="card-btn">View Events</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-history"></i>
+                    <h3>Past Events</h3>
+                    <p>See the impact we've made in previous events and the communities we've helped.</p>
+                    <a href="Past Events.html" class="card-btn">View Past Events</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-pen"></i>
+                    <h3>Event Registration</h3>
+                    <p>Sign up to participate in upcoming events and contribute to the cause.</p>
+                    <a href="../registration/event registration.html" class="card-btn">Register Now</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-calendar-day"></i>
+                    <h3>Calendar View</h3>
+                    <p>Get a comprehensive view of all events happening in the coming months.</p>
+                    <a href="../calender view/calender.html" class="card-btn">View Calendar</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active"><i class="far fa-calendar-alt"></i></a>
+        <a href="../Home/home.html" class="nav-item"><i class="fas fa-home"></i></a>
+        <a href="../Profile/profile.html" class="nav-item"><i class="far fa-user"></i></a>
+    </nav>
+</body>
+</html>

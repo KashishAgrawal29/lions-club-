@@ -1,0 +1,136 @@
+:root {
+    --primary-blue: #02457a;
+    --secondary-yellow: #fdda5d;
+    --light-blue: #e0f0f9;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-yellow);
+    color: var(--primary-blue);
+    line-height: 1.6;
+    padding-bottom: 70px; /* Prevent content overlap with the fixed bottom navigation */
+}
+
+.container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.back-btn {
+    color: var(--primary-blue);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 24px;
+    color: var(--primary-blue);
+}
+
+main {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.slogan {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.impact-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.impact-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.impact-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+.support-text, .cta-text {
+    margin-bottom: 20px;
+}
+
+.donate-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Bottom Navigation Styles */
+ /* Bottom Navigation */
+ .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.nav-item {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-item.active {
+    color: var(--secondary-yellow);
+}
+
+/* Responsive Container */
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+}

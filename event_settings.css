@@ -1,0 +1,201 @@
+/* General Styles */
+:root {
+    --primary-blue: #0044cc;
+    --background-yellow: #FFD700;
+    --light-blue: #e0eaff;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, var(--secondary-yellow) 0%, var(--white) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px; /* Reserve space for the bottom nav */
+}
+
+.container {
+    bottom: 30;
+    flex: 1;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--background-yellow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.back-btn {
+    color: var(--primary-blue);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 20px;
+    color: var(--primary-blue);
+    margin-left: 10px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    padding-right: 30px;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.card {
+    background-color: var(--light-blue);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 12px;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.card-btn {
+    padding: 8px 18px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card-btn:hover {
+    background-color: #003399;
+}
+
+/* Bottom Navigation */
+/* .bottom-nav {
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    border-top: 1px solid #fff;
+} */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Ensure the navbar spans from the left edge */
+    width: 100%;
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    color: var(--white);
+    font-size: 24px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item i {
+    margin-bottom: 5px;
+}
+
+.nav-item p {
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+/* Responsive Design */
+@media (min-width: 412px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 10px 15px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Additional Scrollable Container Styles */
+.card-container {
+    flex: 1;
+    overflow-y: auto; /* Makes the container scrollable vertically */
+    margin-bottom: 70px; /* Avoid overlap with navigation bar */
+}

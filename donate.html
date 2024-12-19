@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity - Lions Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="donate.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <a href="../Home/home.html" class="back-btn">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <h1>Charity</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="image-placeholder"></div>
+            
+            <div class="content">
+                <h2 class="slogan">Support a Better Tomorrow with the Lions Club</h2>
+                
+                <p class="description">
+                    For over a century, Lions Club International has been dedicated to creating a world where everyone can thrive. Our members have a proud history of serving communities, empowering the vulnerable, and addressing global challenges. When you contribute to our charity efforts, you're not just making a donation—you're investing in impactful projects that change lives.
+                </p>
+
+                <h3>Together, we can:</h3>
+                <ul class="impact-list">
+                    <li>Provide essential healthcare to those in need</li>
+                    <li>Empower children and youth through education and mentorship</li>
+                    <li>Protect the environment and promote sustainable practices</li>
+                    <li>Offer relief in times of disaster and rebuild communities</li>
+                </ul>
+
+                <p class="support-text">
+                    Your support ensures that we can continue these meaningful programs, bringing hope and positive change to countless lives. Every contribution, no matter the size, brings us closer to a brighter, more compassionate world.
+                </p>
+
+                <p class="cta-text">Join us in making a difference today.</p>
+
+                <!-- Button for redirection -->
+                <button class="donate-btn" onclick="window.location.href='../payment/payment.html'">DONATE</button>
+            </div>
+        </main>
+
+        <!-- Navigation Bar -->
+        <nav class="bottom-nav">
+            <a href="../event_settings/event_settings.html" class="nav-item">
+                <i class="far fa-calendar"></i>
+            </a>
+            <a href="#" class="nav-item active">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="../Profile/profile.html" class="nav-item">
+                <i class="far fa-user"></i>
+            </a>
+        </nav>
+    </div>
+
+    <style>
+        :root {
+            --primary-blue: #02457a;
+            --secondary-yellow: #fdda5d;
+            --light-blue: #e0f0f9;
+            --white: #ffffff;
+        }
+
+        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, var(--secondary-yellow) 0%, var(--white) 100%);
+            min-height: 100vh;
+            padding-bottom: 70px;
+        }
+
+        /* Header Section */
+               /* Header Section */
+               header {
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Center align content */
+            align-items: center;
+            position: relative; /* Allows absolute positioning for back button */
+        }
+
+        header h1 {
+            color: var(--primary-blue);
+            font-size: 24px;
+            margin: 0; /* Remove margin for accurate centering */
+        }
+
+        .back-btn {
+            color: var(--primary-blue);
+            font-size: 24px;
+            text-decoration: none;
+            position: absolute; /* Position it on the left */
+            left: 20px;
+        }
+
+
+        /* Main Content */
+        .content {
+            padding: 20px;
+        }
+
+        .slogan {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-blue);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .description, .support-text, .cta-text {
+            font-size: 16px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .impact-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .impact-list li {
+            font-size: 16px;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .donate-btn {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .donate-btn:hover {
+            background-color: var(--secondary-yellow);
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--primary-blue);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+        }
+
+        .nav-item {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .nav-item.active {
+            color: var(--secondary-yellow);
+        }
+    </style>
+</body>
+</html>

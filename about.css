@@ -1,0 +1,139 @@
+/* about.css */
+
+/* General Styles */
+:root {
+    --primary-blue: #0044cc;
+    --background-yellow: #FFD700;
+    --light-blue: #e0eaff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, var(--background-yellow), #fff);
+    color: var(--primary-blue);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: var(--background-yellow);
+}
+
+.back-btn {
+    color: var(--primary-blue);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 24px;
+    color: var(--primary-blue);
+    margin: 0 auto;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: var(--light-blue);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.slogan {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+.description {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+}
+
+.impact-list {
+    list-style: none;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.impact-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.impact-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+}
+
+.support-text,
+.cta-text {
+    margin-bottom: 20px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.nav-item {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav-item p {
+    margin-top: 5px;
+    font-size: 12px;
+    color: white;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+}

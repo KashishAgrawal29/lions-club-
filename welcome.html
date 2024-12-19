@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lions Club Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #FCE7A5, #FFEB3B);
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling during splash */
+        }
+
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #FCE7A5, #FFEB3B);
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            justify-content: center; /* Center items vertically */
+            align-items: center; /* Center items horizontally */
+            z-index: 10;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .splash-logo {
+            width: 250px; /* Set the desired logo size */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Space between the logo and the text */
+            opacity: 0; /* Start hidden */
+            animation: fade-in 2s ease-in forwards; /* Fade-in effect */
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1; /* Fully visible */
+            }
+        }
+
+        .splash-text {
+            margin: 0;
+            font-size: 18px; /* Adjust text size */
+        }
+
+        .login-container {
+            display: none; /* Initially hidden */
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            margin: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #1E3A8A;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #1E3A8A;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            color: #1E3A8A;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #D1D5DB;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #2563EB;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2563EB;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1D4ED8;
+        }
+
+        .forgot-password {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .forgot-password a {
+            color: #1E3A8A;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .sign-up {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .sign-up a {
+            color: #1E3A8A;
+            text-decoration: none;
+        }
+
+        .sign-up a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-screen" id="splash-screen">
+        <img src="lion.png" alt="Lions Club Logo" class="splash-logo">
+        <p class="splash-text">Welcome to Lions Club</p>
+    </div>
+
+    <div class="login-container" id="login-container">
+        <h1>Welcome to Lions Club</h1>
+        <p>Enter your credentials for login</p>
+        <form onsubmit="validateLogin(event)">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Log in</button>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
+        <div class="sign-up">
+            <p>Don't have an account? <a href="../sign-up/signup.html">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Splash screen logic
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                document.getElementById("splash-screen").style.display = "none"; // Hide splash screen
+                document.getElementById("login-container").style.display = "block"; // Show login page
+            }, 3000); // 3 seconds delay
+        });
+
+        // Login validation logic
+        function validateLogin(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === username && password === password) {
+                localStorage.setItem("username", username);
+                window.location.href = "../Home/home.html"; // Redirect to home.html
+                
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>

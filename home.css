@@ -1,0 +1,139 @@
+:root {
+    --primary-blue: #02457a;
+    --secondary-yellow: #fdda5d;
+    --light-blue: #e0f0f9;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, var(--secondary-yellow) 0%, var(--white) 100%);
+    min-height: 100vh;
+    padding-bottom: 70px;
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--primary-blue);
+    font-size: 24px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--primary-blue);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Info Banner */
+.info-banner {
+    background-color: var(--light-blue);
+    margin: 20px;
+    height: 150px;
+    border-radius: 15px;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 20px;
+}
+
+.benefits-section h2 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.benefit-card {
+    background-color: var(--light-blue);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.benefit-card i {
+    font-size: 30px;
+    color: var(--primary-blue);
+}
+
+/* Profile Page */
+.profile-header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.profile-avatar {
+    font-size: 80px;
+    color: var(--primary-blue);
+}
+
+.profile-info, .membership-info {
+    padding: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-blue);
+}
+
+.info-item i {
+    color: var(--primary-blue);
+    width: 20px;
+    text-align: center;
+}
+
+/* Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.nav-item {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-item.active {
+    color: var(--secondary-yellow);
+}
+
+/* Utility Classes */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}

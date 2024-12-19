@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Event Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #02457a;
+            --secondary-yellow: #fdda5d;
+            --light-blue: #e0f0f9;
+            --white: #ffffff;
+        }
+        /* Background and layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #FFD700, #fff);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            background-color: #FFD700;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #0044cc;
+            margin: 0 auto;
+        }
+
+        .btn-back {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #0044cc;
+        }
+
+        /* Main content */
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            color: #0044cc;
+            text-align: center;
+        }
+
+        .content p {
+            color: #0044cc;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .form-control {
+            border: none;
+            border-bottom: 2px solid #0044cc;
+            border-radius: 0;
+            background-color: transparent;
+            color: #0044cc;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-bottom-color: #0044cc;
+        }
+
+        .form-label {
+            font-size: 14px;
+            color: #0044cc;
+        }
+
+        .btn-continue {
+            background-color: #0044cc;
+            color: #fff;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .btn-continue:hover {
+            background-color: #003399;
+        }
+
+        /* Footer navigation */
+        .footer {
+            background-color: #0044cc;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .footer i {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--primary-blue);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+        }
+
+        .nav-item {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .nav-item.active {
+            color: var(--secondary-yellow);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <button class="btn-back" onclick="goBack()"><i class="bi bi-chevron-left"></i></button>
+        <h1>Event Registration</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Auction Night</h2>
+        <p>26th November 2024<br>Malad West</p>
+        <p>
+            Experience the excitement of Auction Night, where teams bid on players to form their ultimate cricket squads. Players showcase their skills while team owners compete to build winning combinations. It’s a thrilling blend of strategy, competition, and fun, kicking off the cricket season like never before. Let the bidding wars begin!
+        </p>
+
+        <form id="registrationForm" action="../payment/payment.html">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Mail ID</label>
+                <input type="email" class="form-control" id="email" placeholder="Mail ID" required>
+            </div>
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile Number</label>
+                <input type="tel" class="form-control" id="mobile" placeholder="Mobile Number" required>
+            </div>
+            <div class="mb-3">
+                <label for="attendees" class="form-label">No. of Attendees</label>
+                <input type="number" class="form-control" id="attendees" placeholder="No. of attendees" required>
+            </div>
+            <div class="mb-3">
+                <label for="fee" class="form-label">Non-member Fee</label>
+                <input type="text" class="form-control" id="fee" placeholder="Non-member fee" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Agreement & Consent</label>
+                <input type="checkbox" required> I agree to the terms and conditions
+            </div>
+            <button type="submit" class="btn btn-continue">Continue</button>
+
+                
+        </form>
+</div>
+    <!-- Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="../event_settings/event_settings.html" class="nav-item">
+            <i class="far fa-calendar"></i>
+        </a>
+        <a href="#" class="nav-item active">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="../Profile/profile.html" class="nav-item">
+            <i class="far fa-user"></i>
+        </a>
+    </nav>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+
+
+
+    </script>
+</body>
+</html>

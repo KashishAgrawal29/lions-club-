@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #02457a;
+            --secondary-yellow: #fdda5d;
+            --light-blue: #e0f0f9;
+            --white: #ffffff;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--primary-blue);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+        }
+
+        .nav-item {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .nav-item.active {
+            color: var(--secondary-yellow);
+        }
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #FFD700, #fff);
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+        }
+
+        /* Header */
+        .header {
+            background-color: #FFD700;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #0044cc;
+            margin: 0 auto;
+        }
+
+        .btn-back {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #0044cc;
+        }
+
+        /* Content */
+        .content {
+            padding: 20px;
+            padding-bottom: 80px; /* Added space for the footer */
+        }
+
+        .content h2 {
+            color: #0044cc;
+            margin-bottom: 10px;
+        }
+
+        .monthly-title {
+            color: #0044cc;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Carousel for Vertical Images */
+        .carousel-item {
+            height: 300px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .carousel-vertical .carousel-item {
+            height: 200px;
+             /* Decreased space between carousels */
+        }
+
+        /* Single Image */
+        .single-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+             /* Decreased margin to reduce space */
+        }
+
+        /* Event Buttons */
+        .event-btns {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .event-btns button {
+            padding: 5px;
+            font-size: 12px;
+            color: #fff;
+            background-color: #0044cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Footer Navigation */
+        .footer {
+            background-color: #0044cc;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer i {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: #fff;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 430px) {
+            .header h1 {
+                font-size: 18px; /* Adjusted for smaller screen */
+            }
+
+            .carousel-item img {
+                height: 250px; /* Adjust vertical carousel images */
+            }
+
+            .single-image {
+                height: 150px; /* Adjust horizontal carousel images */
+            }
+
+            .monthly-title {
+                font-size: 16px; /* Adjust the size of titles */
+            }
+
+            .content {
+                padding: 15px;
+                padding-bottom: 60px; /* Add some space for footer */
+            }
+
+            .event-btns button {
+                font-size: 10px; /* Smaller buttons for small screens */
+            }
+
+            .footer {
+                padding: 5px 0;
+            }
+
+            .footer i {
+                font-size: 18px; /* Smaller icons for smaller screens */
+            }
+
+            .footer p {
+                font-size: 10px; /* Smaller text for footer */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <button class="btn-back" onclick="goBack()">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+        <h1>Past Events - September 2023</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Monthly Title -->
+        <h3 class="monthly-title">September 2023</h3>
+
+        <!-- Vertical Carousel -->
+        <div id="verticalCarousel" class="carousel slide carousel-vertical" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="photo11.JPG" class="d-block w-100" alt="Event 1" width="150" height="300">
+                </div>
+                <div class="carousel-item">
+                    <img src="photo12.JPG" class="d-block w-100" alt="Event 1" width="150" height="300">
+                </div>
+                <div class="carousel-item">
+                    <img src="photo13.JPG" class="d-block w-100" alt="Event 1" width="150" height="300">
+                </div>
+                <div class="carousel-item">
+                    <img src="photo14.JPG" class="d-block w-100" alt="Event 1" width="150" height="300">
+                </div>
+                <div class="carousel-item">
+                    <img src="photo15.JPG" class="d-block w-100" alt="Event 1" width="150" height="300">
+                </div>
+            </div>
+        </div>
+
+        <!-- Static Image -->
+        <h2>This Year:</h2>
+        <img src="photo3.JPG" class="single-image" alt="Event 6">
+
+        <!-- Event Details Section -->
+        <div class="monthly-events">
+            <h1>More Events</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="photo16.JPG" class="img-fluid" alt="Event 8" width="400" height="250">
+                    <div class="event-btns">
+                        <a href="../registered/registered.html" class="btn btn-primary" style="text-decoration: none; color: white; padding: 5px 10px; background-color: #0044cc; border-radius: 5px;">Register Now</a>
+                        <a href="../event info/event_info.html" class="btn btn-primary" style="text-decoration: none; color: white; padding: 5px 10px; background-color: #0044cc; border-radius: 5px;">Know More</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="photo16.JPG" class="img-fluid" alt="Event 8" width="400" height="250">
+                    <div class="event-btns">
+                        <a href="../registered/registered.html" class="btn btn-primary" style="text-decoration: none; color: white; padding: 5px 10px; background-color: #0044cc; border-radius: 5px;">Register Now</a>
+                        <a href="../event info/event_info.html" class="btn btn-primary" style="text-decoration: none; color: white; padding: 5px 10px; background-color: #0044cc; border-radius: 5px;">Know More</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+       <!-- Navigation Bar -->
+   <nav class="bottom-nav">
+    <a href="../event_settings/event_settings.html" class="nav-item active">
+        <i class="far fa-calendar"></i>
+    </a>
+    <a href="../Home/home.html" class="nav-item">
+        <i class="fas fa-home"></i>
+    </a>
+    <a href="../Profile/profile.html" class="nav-item">
+        <i class="far fa-user"></i>
+    </a>
+</nav>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Successful</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffd54f; /* Same background as home.html */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-grow: 1; /* Ensures content area takes up available space */
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #02457a; /* Navbar background color */
+            color: white;
+            padding: 10px;
+        }
+
+        .back-btn {
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            color: #fdda5d;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .donation-confirmation {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .donation-confirmation img {
+            width: 200px;
+            height: auto;
+        }
+
+        .donation-confirmation p {
+            font-size: 20px;
+            color: #02457a;
+        }
+
+        .donation-confirmation .thank-you {
+            font-size: 22px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        /* Footer Navigation Bar */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #1a237e;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav-icon {
+            color: white;
+            font-size: 24px;
+        }
+
+        .nav-icon:hover {
+            color: #fdda5d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="javascript:history.back()" class="back-btn"><i class="fas fa-chevron-left"></i></a>
+            <h1>Donation Successful</h1>
+        </header>
+        
+        <div class="donation-confirmation">
+            <img src="lion.png" alt="Lions International Logo">
+            <p class="thank-you">Thank you for your generous donation!</p>
+            <p>Your support helps make a difference in the lives of many. We appreciate your commitment to our cause.</p>
+            <p>Stay tuned for updates on how your donation is making an impact.</p>
+        </div>
+    </div>
+
+    <!-- Footer Navigation Bar -->
+    <div class="bottom-nav">
+        <a href="../event_settings/event_settings.html" class="nav-icon">
+            <i class="fas fa-calendar"></i>
+        </a>
+        <a href="../Home/home.html" class="nav-icon">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="../Profile/profile.html" class="nav-icon">
+            <i class="fas fa-user"></i>
+        </a>
+    </div>
+</body>
+</html>

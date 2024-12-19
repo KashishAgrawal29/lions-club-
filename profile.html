@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Lions Club</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #fdda5d 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            background-color: #02457a;
+            color: #ffffff;
+            padding: 10px 20px;
+        }
+
+        .top-nav .back-btn {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Profile Container */
+        .profile-container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-header {
+            margin-bottom: 20px;
+        }
+
+        .profile-avatar {
+            font-size: 80px;
+            color: #02457a;
+        }
+
+        .profile-header h1 {
+            margin: 10px 0 0;
+            font-size: 24px;
+            color: #02457a;
+        }
+
+        .info-section {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .info-section h2 {
+            font-size: 20px;
+            color: #02457a;
+            border-bottom: 2px solid #fdda5d;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333333;
+        }
+
+        .info-item i {
+            color: #02457a;
+            margin-right: 10px;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #02457a;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+        }
+
+        .nav-item {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .nav-item.active {
+            color: #fdda5d;
+        }
+    </style>
+</head>
+<body class="profile-page">
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <!-- Back Button -->
+        <a href="javascript:history.back()" class="back-btn">
+            <i class="fas fa-chevron-left"></i> Back
+        </a>
+    </nav>
+
+    <!-- Profile Content -->
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <h1>Kashish Agarwal</h1>
+        </div>
+
+        <!-- Personal Information Section -->
+        <section class="info-section">
+            <h2>Personal Information</h2>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Location</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>Mail ID</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Professional Background</span>
+            </div>
+        </section>
+
+        <!-- Membership Details Section -->
+        <section class="info-section">
+            <h2>Membership Details</h2>
+            <div class="info-item">
+                <i class="fas fa-user-tag"></i>
+                <span>Designation</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Joining Date</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-credit-card"></i>
+                <span>Payment Detail</span>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="../event_settings/event_settings.html" class="nav-item"><i class="fas fa-calendar"></i></a>
+        <a href="../Home/home.html" class="nav-item"><i class="fas fa-home"></i></a>
+        <a href="#" class="nav-item active"><i class="fas fa-user"></i></a>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lions Club</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #02457a;
+            --secondary-yellow: #fdda5d;
+            --light-blue: #e0f0f9;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, var(--secondary-yellow) 0%, var(--white) 100%);
+            min-height: 100vh;
+            padding-bottom: 70px;
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .back-btn {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: var(--light-blue);
+            border-radius: 15px;
+        }
+
+        .slogan {
+            color: var(--primary-blue);
+        }
+
+        .impact-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--primary-blue);
+        }
+
+        .nav-item {
+            color: var(--white);
+            font-size: 24px;
+        }
+
+        .nav-item.active {
+            color: var(--secondary-yellow);
+        }
+    </style>
+</head>
+<body>
+    <!-- Container -->
+    <div class="container-fluid">
+        <!-- Header Section -->
+        <header class="d-flex align-items-center p-3">
+            <a href="../Home/home.html" class="back-btn me-3">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <h1 class="m-0 fs-4 text-center flex-grow-1">About Us</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container py-4">
+            <!-- Image Placeholder -->
+            <div class="image-placeholder mb-4"></div>
+
+            <!-- Content Section -->
+            <div class="text-center">
+                <h2 class="slogan fw-bold mb-3">Lions Club International: A Century of Service</h2>
+
+                <p class="description mb-4">
+                    For over 100 years, Lions Club International has been a beacon of hope and kindness, empowering communities and changing lives worldwide. Through our global network of dedicated members, we address pressing challenges to create a world where everyone can thrive.
+                </p>
+
+                <h3 class="mb-3">Our Mission</h3>
+                <p class="description mb-4">
+                    We serve to improve lives, empower youth, strengthen communities, and preserve the environment. With a membership of over 1.4 million people in 49,000 clubs worldwide, Lions Club is one of the largest and most impactful service organizations in the world.
+                </p>
+
+                <h3 class="mb-3">Our Legacy</h3>
+                <ul class="impact-list mb-4">
+                    <li>Providing humanitarian aid to millions across the globe</li>
+                    <li>Advocating for vision health and reducing preventable blindness</li>
+                    <li>Promoting sustainable environmental practices</li>
+                    <li>Supporting education and mentorship programs for the youth</li>
+                </ul>
+
+                <p class="support-text mb-3">
+                    Together, we make a difference that lasts generations. Lions Club is built on the passion, dedication, and kindness of its members, committed to making the world a better place.
+                </p>
+
+                <p class="cta-text">Join us in continuing this legacy of compassion and service.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav d-flex justify-content-around py-3">
+        <a href="../event_settings/event_settings.html" class="nav-item">
+            <i class="far fa-calendar"></i>
+        </a>
+        <a href="../Home/home.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="../Profile/profile.html" class="nav-item">
+            <i class="far fa-user"></i>
+        </a>
+    </nav>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
